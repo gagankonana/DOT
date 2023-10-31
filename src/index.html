@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOT Inspection</title>
+  </head>
+  <body>
+    <div id="filter-section"> Filters <label for="basic-filter">BASIC:</label>
+      <select id="basic-filter">
+        <option value="none">All</option>
+      </select>
+      <label for="basic-filter">Status:</label>
+      <select id="basic-filter-2">
+        <option value="none">All</option>
+        <option value="No violation">No voilation</option>
+        <option value="Unresolved">Unresolved</option>
+        <option value="Resolved">Resolved</option>
+      </select>
+      <button id="filter-button" onclick="applyFilter()">Filter</button>
+      <button id="clear-filter-button" onclick="clearFilter()">Clear Filter</button>
+    </div>
+    </div>
+    <table id="data-table">
+      <thead>
+        <tr>
+          <th onclick="sortTable('date')">date <span class="sort-indicator" data-column="date"></span>
+          </th>
+          <th onclick="sortTable('inspection_no')">inspection_no <span class="sort-indicator" data-column="inspection_no"></span>
+          </th>
+          <th onclick="sortTable('report_state')">report_state <span class="sort-indicator" data-column="report_state"></span>
+          </th>
+          <th onclick="sortTable('vehicle_plate')">vehicle_plate <span class="sort-indicator" data-column="vehicle_plate"></span>
+          </th>
+          <th onclick="sortTable('state')">state <span class="sort-indicator" data-column="state"></span>
+          </th>
+          <th onclick="sortTable('type_')">type <span class="sort-indicator" data-column="type_"></span>
+          </th>
+          <th onclick="sortTable('weight')">weight <span class="sort-indicator" data-column="weight"></span>
+          </th>
+          <th onclick="sortTable('status')">status <span class="sort-indicator" data-column="status"></span>
+          </th>
+          <th onclick="sortTable('BASIC')">BASIC <span class="sort-indicator" data-column="BASIC"></span>
+          </th>
+        </tr>
+      </thead>
+      <tbody id="data-body"></tbody>
+    </table>
+    <div class="loader" id="loader"></div>
+    <div id="pagination">
+      <button id="prevPage">Previous</button>
+      <span id="currentPage">Page 1</span>
+      <button id="nextPage">Next</button>
+    </div>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </body>
+</html>

@@ -1,0 +1,149 @@
+ table {
+     border-collapse: collapse;
+     width: 100%;
+}
+ #data-table {
+     table-layout: fixed;
+}
+ #data-body {
+     max-height: 300px;
+     overflow-y: scroll;
+}
+ th, td {
+     text-align: left;
+     padding: 8px;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+}
+ tr:nth-child(even){
+    background-color: #f2f2f2
+}
+ th {
+     background-color: #04AA6D;
+     color: white;
+}
+ #pagination {
+     text-align: center;
+     margin: 20px auto;
+}
+ #data-table td.status-success {
+     color: green;
+}
+/* Style for "Failure" status */
+ #data-table td.status-failure {
+     color: red;
+}
+ #data-table td.status-neutral {
+     color: orange;
+}
+ .loader {
+     text-align: center;
+     border: 4px solid #f3f3f3;
+     border-top: 4px solid #3498db;
+     border-radius: 50%;
+     width: 50px;
+     height: 50px;
+     animation: spin 2s linear infinite;
+     display: none;
+    /* Initially hidden */
+     margin: 0 auto;
+    /* Add this line */
+     line-height: 200px;
+}
+/* Keyframes animation for the loader */
+ @keyframes spin {
+     0% {
+         transform: rotate(0deg);
+    }
+     100% {
+         transform: rotate(360deg);
+    }
+}
+ #pagination button {
+     padding: 5px 10px;
+     margin: 0 5px;
+     cursor: pointer;
+}
+/* #filter-section {
+     margin: 20px 0;
+}
+ #filter-section input {
+     margin: 5px;
+}
+ */
+ #filter-section {
+     border: 1px solid #ccc;
+     padding: 10px;
+     background-color: #f7f7f7;
+     border-radius: 5px;
+     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+     text-align: center;
+     margin: 20px 0;
+}
+ #filter-section label {
+     font-weight: bold;
+}
+ #basic-filter {
+     padding: 5px;
+     margin-right: 10px;
+}
+ #filter-button, #clear-filter-button {
+     padding: 5px 10px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+}
+ #filter-button {
+     background-color: #04AA6D;
+     color: white;
+}
+ #clear-filter-button {
+     background-color: #ccc;
+     color: #333;
+}
+ .sort-indicator.asc::after {
+     content: '+';
+     opacity: 0.5;
+}
+ .sort-indicator.desc::after {
+     content: '-';
+     opacity: 0.5;
+}
+ .sort-indicator::after {
+     content: ' ';
+     opacity: 0.5;
+     .button {
+         border: none;
+         color: white;
+         padding: 15px 32px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 16px;
+         margin: 4px 2px;
+         cursor: pointer;
+    }
+     .button1 {
+        background-color: #4CAF50;
+    }
+     .button2 {
+        background-color: #008CBA;
+    }
+}
+
+.row.content {
+        height: 550px
+      }
+
+      /* Set gray background color and 100% height */
+      .sidenav {
+        background-color: #f1f1f1;
+        height: 100%;
+      }
+
+      @media screen and (max-width: 767px) {
+        .row.content {
+          height: auto;
+        }
+      }

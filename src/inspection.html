@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row content">
+
+        <br>
+
+        <div class="col-sm-12">
+          <!-- <div class="well"> -->
+          <div class="row">
+            <div class="col-sm-3">
+              <button class="btn btn-secondary" id="backButton">Go Back</button>
+              <h3>Inspection Overview</h3>
+            </div>
+            <button class="btn btn-success pull-right" id="resolve">Mark as Resolved</button>
+          </div>
+          <!-- </div> -->
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="well">
+                <h5>Status:</h5>
+                <b>
+                  <p id="status"></p>
+                </b>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="well">
+                <h5>Report Number</h5>
+                <b>
+                  <p id="inspection_no"></p>
+                </b>
+                
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="well">
+                <h5>Report State</h5>
+                <b>
+                  <p id="report_state"></p>
+                </b>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="well">
+                <h5>Date</h5>
+                <b>
+                  <p id="date"></p>
+                </b>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="well">
+                <h5>Violations</h5>
+                <table id="data-table-violation">
+                  <thead>
+                    <tr>
+                      <th>Code <span data-column="code"></span>
+                      </th>
+                      <th>Section <span data-column="section"></span>
+                      </th>
+                      <th>Unit <span data-column="unit"></span>
+                      </th>
+                      <th>OOS <span data-column="oos"></span>
+                      </th>
+                      <th>Description <span data-column="desc"></span>
+                      </th>
+                      <th>IN SMS <span data-column="in_sms"></span>
+                      </th>
+                      <th>BASIC <span data-column="BASIC"></span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody id="data-body-vehicle"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="well">
+                <h5>Vehicles</h5>
+                <table id="data-table-vehicle">
+                  <thead>
+                    <tr>
+                      <th>Unit <span data-column="date"></span>
+                      </th>
+                      <th>Type <span data-column="inspection_no"></span>
+                      </th>
+                      <th>Plate State <span data-column="vehicle_plate"></span>
+                      </th>
+                      <th>Plate Number <span data-column="state"></span>
+                      </th>
+                      <th>VIN <span data-column="type_"></span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody id="data-body"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script_inspection.js"></script>
+  </body>
+</html>
